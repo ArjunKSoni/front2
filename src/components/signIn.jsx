@@ -24,11 +24,11 @@ const SignIn = () => {
                     <h1>Login Your Account</h1>
                 </div>
                 <div className="form-outline mb-4">
-                    <label className="form-label" for="form2Example1">Email address</label>
+                    <label className="form-label" htmlFor="form2Example1">Email address</label>
                     <input type="email" name='email' onChange={onChange} id="form2Example1" className="form-control" />
                 </div>
                 <div className="form-outline mb-4">
-                    <label className="form-label" for="form2Example2">Password</label>
+                    <label className="form-label" htmlFor="form2Example2">Password</label>
                     <input type="password" name='password' onChange={onChange} id="form2Example2" className="form-control" />
                 </div>
                 <div className="row mb-4">

@@ -37,7 +37,7 @@ const Navbar = () => {
                         <Link type="button" to="/sign-in" className="btn btn-secondary">Login</Link>
                     </>}
                     {token && <>
-                        <h3>{user}</h3>
+                        <Link type="button" className="btn btn-secondary ml">{user}</Link>
                         <Link type="button" to="/" onClick={handleOnclick} className="btn btn-secondary ml">logout</Link></>}
                 </div>
             </div>

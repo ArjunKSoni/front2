@@ -25,20 +25,20 @@ const RegisterUser = () => {
           <h1>Sign-Up</h1></div>
         <form>
           <div class="mb-3">
-            <label for="inputName" class="form-label">Name</label>
+            <label htmlFor="inputName" class="form-label">Name</label>
             <input type="text" name='user' onChange={onChange} required class="form-control" id="exampleInputname" aria-describedby="emailHelp" placeholder="Enter your Name" />
           </div>
 
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <label htmlFor="exampleInputEmail1" class="form-label">Email address</label>
             <input type="email" name='email' onChange={onChange} required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
           </div>
           <div class="mb-3">
-            <label for="exampleInputNumber" class="form-label">Phone Number</label>
+            <label htmlFor="exampleInputNumber" class="form-label">Phone Number</label>
             <input type="number" name='mobile' onChange={onChange} required class="form-control" id="exampleInputnumbers" />
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <label htmlFor="exampleInputPassword1" class="form-label">Password</label>
             <input type="password" name='password' onChange={onChange} required class="form-control" id="exampleInputPassword1" />
             <div id="passwordHelp" class="form-text">Use a strong Password</div>
           </div>
