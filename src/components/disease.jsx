@@ -49,7 +49,7 @@ const Disease = () => {
               <h1 class="card-title">Card title</h1>
               <h6 class="card-subtitle text-muted">Support card subtitle</h6>
             </div>
-            <img src={previewUrl} alt='image' width={"200px"} height={"200px"} />
+            <img src={previewUrl} alt='image' width={"300px"} height={"200px"} />
             <div class="card-block fx">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
