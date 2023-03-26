@@ -11,7 +11,6 @@ const RegisterUser = () => {
     mobile: ""
   })
   const handleClick = (e) => {
-    e.preventDefault()
     register(user)
   }
 

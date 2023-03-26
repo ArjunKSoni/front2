@@ -4,7 +4,6 @@ import Authcontext from "./authcontext"
 const Authstate = (props) => {
     const [token, setToken] = useState()
     const [user, setUser] = useState()
-    const [message, setMessage] = useState()
     const register = async (reg) => {
         const apicall = await fetch(`https://backend-p.up.railway.app/api/auth/register`, {
             method: 'POST',
@@ -16,7 +15,9 @@ const Authstate = (props) => {
         console.log(data)
         setToken(data.authToken)
         setUser(data.user)
-        setMessage(data.message)
+        alert(data.message)
+
+
     }
     const login = async (reg) => {
         const apicall = await fetch(`https://backend-p.up.railway.app/api/auth/login`, {
@@ -29,11 +30,11 @@ const Authstate = (props) => {
         console.log(data)
         setToken(data.authToken)
         setUser(data.user)
-        setMessage(data.message)
+        alert(data.message)
     }
 
     return (
-        <Authcontext.Provider value={{ register, message, token, user, login, setToken, setMessage, setUser }}>
+        <Authcontext.Provider value={{ register, token, user, login, setToken, setUser }}>
             {props.children}
         </Authcontext.Provider>
     )

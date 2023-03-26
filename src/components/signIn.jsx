@@ -5,12 +5,14 @@ import Authcontext from '../context/authcontext'
 const SignIn = () => {
     const { login } = useContext(Authcontext)
 
+
     const [user, setUser] = useState({
         email: "",
         password: ""
     })
     const handleClick = (e) => {
         login(user)
+
     }
 
     const onChange = (e) => {
