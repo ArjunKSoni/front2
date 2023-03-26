@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const SignIn = () => {
     return (
         <div className='signin df'>
-            <form>
+            <form className='form'>
                 <img src="leaf.jpg" className='leaf' alt="" />
                 <div className="df1">
                     <h1>Login Your Account</h1>
