@@ -202,3 +202,41 @@
   position: absolute;
   transform: translate(-50% -50%);
 }
+
+.card2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(3px);
+  background: url("../public/d13.jpg") no-repeat center center/cover;
+}
+
+.card-block {
+  width: 20vw;
+}
+
+.card {
+  padding: 50px 50px;
+  background-color: #000000a6;
+  color: #ffffff;
+}
+
+.fx p {
+  font-size: larger;
+}
+
+.fx img {
+  border-radius: 2px;
+  border: .5rem ridge #ffff;
+}
+
+.fx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  flex-wrap: wrap;
+}
