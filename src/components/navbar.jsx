@@ -1,9 +1,13 @@
-import React, { } from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import Authcontext from '../context/authcontext'
 
 
 const Navbar = () => {
-
+    const { token, setToken } = useContext(Authcontext)
+    const handleOnclick = (e) => {
+        setToken("")
+    }
     return (
         <nav className="navbar navbar-expand-lg sticky-top navbar-dark">
             <div className="container-fluid">
@@ -28,9 +32,11 @@ const Navbar = () => {
                             </ul>
                         </li>
                     </ul>
-
-                    <Link type="button" to="/registerUser" className="btn btn-secondary ml">Signup</Link>
-                    <Link type="button" to="/sign-in" className="btn btn-secondary">Login</Link>
+                    {!token && <>
+                        <Link type="button" to="/registerUser" className="btn btn-secondary ml">Signup</Link>
+                        <Link type="button" to="/sign-in" className="btn btn-secondary">Login</Link>
+                    </>}
+                    {token && <><Link type="button" to="/" onClick={handleOnclick} className="btn btn-secondary ml">logout</Link></>}
                 </div>
             </div>
         </nav>

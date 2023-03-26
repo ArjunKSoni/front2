@@ -1,6 +1,23 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import { Link } from 'react-router-dom'
+import Authcontext from '../context/authcontext'
 
 const RegisterUser = () => {
+  const { register } = useContext(Authcontext)
+  const [user, setUser] = useState({
+    user: "",
+    email: "",
+    password: "",
+    mobile: ""
+  })
+  const handleClick = (e) => {
+    e.preventDefault()
+    register(user)
+  }
+
+  const onChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value })
+  }
   return (
     <div className='register'>
       <div class="box">
@@ -9,28 +26,24 @@ const RegisterUser = () => {
         <form>
           <div class="mb-3">
             <label for="inputName" class="form-label">Name</label>
-            <input type="text" required class="form-control" id="exampleInputname" aria-describedby="emailHelp" placeholder="Enter your Name" />
+            <input type="text" name='user' onChange={onChange} required class="form-control" id="exampleInputname" aria-describedby="emailHelp" placeholder="Enter your Name" />
           </div>
 
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+            <input type="email" name='email' onChange={onChange} required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
           </div>
           <div class="mb-3">
             <label for="exampleInputNumber" class="form-label">Phone Number</label>
-            <input type="number" required class="form-control" id="exampleInputnumbers" />
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputddress1" class="form-label">Address (Optional)</label>
-            <input type="text" required class="form-control" id="exampleInputPassword1" />
+            <input type="number" name='mobile' onChange={onChange} required class="form-control" id="exampleInputnumbers" />
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" required class="form-control" id="exampleInputPassword1" />
+            <input type="password" name='password' onChange={onChange} required class="form-control" id="exampleInputPassword1" />
             <div id="passwordHelp" class="form-text">Use a strong Password</div>
           </div>
           <div id="signbut">
-            <button id='signbut' type="submit" className="btn btn-dark btn-block mb-4">Sign in</button>
+            <Link to={"/"}><button id='signbut' type="submit" onClick={handleClick} className="btn btn-dark btn-block mb-4">Register</button></Link>
           </div>
         </form>
       </div>
