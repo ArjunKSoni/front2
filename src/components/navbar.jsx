@@ -4,7 +4,7 @@ import Authcontext from '../context/authcontext'
 
 
 const Navbar = () => {
-    const { token, setToken } = useContext(Authcontext)
+    const { token, setToken, user } = useContext(Authcontext)
     const handleOnclick = (e) => {
         setToken("")
     }
@@ -36,7 +36,9 @@ const Navbar = () => {
                         <Link type="button" to="/registerUser" className="btn btn-secondary ml">Signup</Link>
                         <Link type="button" to="/sign-in" className="btn btn-secondary">Login</Link>
                     </>}
-                    {token && <><Link type="button" to="/" onClick={handleOnclick} className="btn btn-secondary ml">logout</Link></>}
+                    {token && <>
+                        <h3>{user}</h3>
+                        <Link type="button" to="/" onClick={handleOnclick} className="btn btn-secondary ml">logout</Link></>}
                 </div>
             </div>
         </nav>
