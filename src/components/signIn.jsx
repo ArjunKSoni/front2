@@ -5,7 +5,7 @@ const SignIn = () => {
     return (
         <div className='signin df'>
             <form>
-            <img src="leaf.jpg" className='leaf' alt="" />
+                <img src="leaf.jpg" className='leaf' alt="" />
                 <div className="df1">
                     <h1>Login Your Account</h1>
                 </div>
@@ -25,7 +25,7 @@ const SignIn = () => {
                     <button id='signbut' type="submit" className="btn btn-dark btn-block mb-4">Sign in</button>
                 </div>
                 <div className="text-center">
-                    <p>Not a member? <Link to="#!">Register</Link></p>
+                    <p>Not a member? <Link to="/registerUser">Register</Link></p>
                 </div>
             </form>
         </div>
