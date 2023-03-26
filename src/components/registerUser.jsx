@@ -19,7 +19,7 @@ const RegisterUser = () => {
   }
   return (
     <div className='register'>
-      <div class="box">
+      <div class="box1">
         <div class="image"><img src="leaf.jpg" className='leaf2' alt="" />
           <h1>Sign-Up</h1></div>
         <form>
