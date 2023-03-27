@@ -189,6 +189,11 @@
   background-size: cover;
 }
 
+
+.hei {
+  margin-top: 50px;
+}
+
 /* no-repeat center center/cover */
 .box1 {
   width: 35%;
