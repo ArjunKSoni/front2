@@ -1,29 +1,25 @@
-import React from 'react'
-
+import React, { useState, useContext } from 'react'
+import Authcontext from '../context/authcontext'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
+  const { token, search } = useContext(Authcontext)
+  const [sea, setSearch] = useState("")
 
-  try {
-    (async () => {
-      const apicall = await fetch(`...`, {
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json"
-        }, body: JSON.stringify({}),
-      })
-      let data = await apicall.json()
-      data = Array.from(data)
-      setData(li.concat(data))
-    })();
-  } catch (error) {
-
+  const onchange = (e) => {
+    setSearch(e.target.value)
   }
+  const handleOnclick = (e) => {
+    search(sea)
+  }
+
   return (
     <div className='df home'>
       <div className='container h_main df'>
         <form className="d-flex">
-          <input className="form-control  s_input" type="search" placeholder="Search for Crops..." aria-label="Search" />
-          <button type="submit" className="btn btn-dark s_button">Search</button>
+          <input className="form-control  s_input" type="search" onChange={onchange} placeholder="Search for Crops..." aria-label="Search" />
+          {!token && <><button type="submit" onClick={handleOnclick} className="btn btn-dark s_button">Search</button></>}
+          {token && <><Link to={"/landingPage"}><button type="submit" onClick={handleOnclick} className="btn btn-dark s_button">Search</button></Link></>}
         </form>
       </div>
       <div className='hr'></div>

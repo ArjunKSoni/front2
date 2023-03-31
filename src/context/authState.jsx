@@ -4,6 +4,7 @@ import Authcontext from "./authcontext"
 const Authstate = (props) => {
     const [token, setToken] = useState()
     const [user, setUser] = useState()
+    const [crop, setData] = useState()
     const register = async (reg) => {
         const apicall = await fetch(`https://backend-p.up.railway.app/api/auth/register`, {
             method: 'POST',
@@ -19,6 +20,19 @@ const Authstate = (props) => {
 
 
     }
+
+    const search = async (search) => {
+        const apicall = await fetch(`http://127.0.0.1:3000/nav`, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            }, body: JSON.stringify({ search: search }),
+        })
+        let data = await apicall.json()
+        data = Array.from(data)
+        setData(data)
+    }
+
     const login = async (reg) => {
         const apicall = await fetch(`https://backend-p.up.railway.app/api/auth/login`, {
             method: 'POST',
@@ -34,7 +48,7 @@ const Authstate = (props) => {
     }
 
     return (
-        <Authcontext.Provider value={{ register, token, user, login, setToken, setUser }}>
+        <Authcontext.Provider value={{ register, token, user, login, setToken, setUser, search, crop }}>
             {props.children}
         </Authcontext.Provider>
     )

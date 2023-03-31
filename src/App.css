@@ -312,3 +312,125 @@
 .button4:hover {
   transform: scale(1.2);
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Kanit:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
+
+.box7 {
+  background: rgb(2, 0, 36) linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(26, 102, 238, 1) 0%, rgba(0, 228, 255, 1) 72%);
+  min-height: 65vh;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+
+.img7 {
+  border: solid white 8px;
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  max-width: 40%;
+}
+
+.img7 img {
+  width: 290px;
+  height: 190px;
+}
+
+.desc7 {
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 55%;
+}
+
+.desc7 h1 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  font-family: 'Heebo', sans-serif;
+  font-family: 'Kanit', sans-serif;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.desc7 p {
+  font-weight: bolder;
+  font-size: 17px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.black17 {
+  background-color: rgb(252, 252, 252);
+  min-height: 20vh;
+  width: 90%;
+  flex-wrap: wrap;
+  top: -30px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 5px 0px 30px 4px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#body7,
+.card7,
+.card17 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#body7 {
+  background-color: rgb(255, 255, 255);
+}
+
+.card7 {
+  padding: 10px 0;
+}
+
+.card7 button,
+.card7 button img {
+  border-radius: 100px;
+  margin-bottom: 5px;
+  background-color: transparent;
+  border-color: transparent;
+  width: 100px;
+  height: 100px;
+
+}
+
+.card7 p {
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+}
+
+.card7:hover {
+  transform: scale(1.08);
+}
+
+.black7 {
+  padding-top: 50px;
+  background-color: rgb(43, 42, 42);
+  width: 100%;
+  top: -50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.center7 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
