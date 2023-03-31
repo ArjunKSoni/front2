@@ -10,6 +10,8 @@ const Home = () => {
     setSearch(e.target.value)
   }
   const handleOnclick = (e) => {
+    e.preventDefault()
+    console.log(sea)
     search(sea)
   }
 

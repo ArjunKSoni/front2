@@ -30,6 +30,7 @@ const Authstate = (props) => {
         })
         let data = await apicall.json()
         data = Array.from(data)
+        console.log(data)
         setData(data)
     }
 
