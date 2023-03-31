@@ -189,9 +189,24 @@
   background-size: cover;
 }
 
+.hh_main {
+  margin-top: 70px;
+}
 
 .hei {
   margin-top: 60px;
+}
+
+.box {
+  padding: 20px;
+  background-color: #837e7ea0;
+  margin-bottom: 10px;
+  /* width: 400px; */
+}
+
+.df2 {
+  flex-wrap: wrap;
+  flex-direction: row !important;
 }
 
 /* no-repeat center center/cover */
@@ -244,4 +259,19 @@
   flex-direction: column;
   gap: 15px;
   flex-wrap: wrap;
+}
+
+.soilbut {
+  margin-top: 10px;
+
+}
+
+.predict_main {
+  margin-top: 20px;
+}
+
+.soilbut button {
+  width: 12rem;
+  height: 3rem;
+  border-radius: 10px;
 }

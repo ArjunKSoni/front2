@@ -26,7 +26,8 @@ const Navbar = () => {
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><Link className="dropdown-item " to="/disease">Plant Diseases</Link></li>
-                                <li><Link className="dropdown-item " to="/predsoil">Suggest Crop</Link></li>
+                                <li><Link className="dropdown-item " to="/predsoil">Predict Soil</Link></li>
+                                <li><Link className="dropdown-item " to="/predcrop">Predict Crop</Link></li>
                                 <li><hr className="dropdown-divider" /></li>
                                 <li><Link className="dropdown-item " to="/helpingHand">Helping Hands</Link></li>
                             </ul>

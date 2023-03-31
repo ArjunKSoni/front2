@@ -15,6 +15,7 @@ import HelpingHand from './components/helpingHand';
 import Ngo from './components/ngo';
 import SignIn from './components/signIn';
 import Authstate from './context/authState';
+import Predictcrop from './components/predictcrop';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route exact path='/' element={<Home />} />
           <Route exact path='/disease' element={<Disease />} />
           <Route exact path='/predsoil' element={<Predictsoil />} />
+          <Route exact path='/predcrop' element={<Predictcrop />} />
           <Route exact path='/registerUser' element={<RegisterUser />} />
           <Route exact path='/helpingHand' element={<HelpingHand />} />
           <Route exact path='/store' element={<Ngo />} />

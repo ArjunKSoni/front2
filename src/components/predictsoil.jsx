@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import CropItem from './cropItem';
+import { Link } from 'react-router-dom';
 
 const Predictsoil = () => {
   let li = []
@@ -25,45 +26,36 @@ const Predictsoil = () => {
   return (
     <div className='predict_main'>
       {/* create form  */}
-      <form className='ct'>
-        <h1>Crop Prediction</h1>
-        <div className="row mb-4">
-          <div className="col">
-            <div className="form-outline">
-              <input type="number" required name='N' id="form3Example1" className="form-control" />
-              <label className="form-label" htmlFor="form3Example1">Nitrogen</label>
-            </div>
-          </div>
-          <div className="col">
-            <div className="form-outline">
-              <input type="number" required name='K' id="form3Example2" className="form-control" />
-              <label className="form-label" htmlFor="form3Example2">Potassium</label>
+      <div className="container-fluid px-1 py-5 mx-auto">
+        <div className="row d-flex justify-content-center">
+          <div className="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <h3>Predict Soil</h3>
+            <p className="blue-text">Just answer a few questions<br /> so that we can predict the right soil conditions for you.</p>
+            <div className="card">
+              <form className="form-card" onsubmit="event.preventDefault()">
+                <div className="row justify-content-between text-left">
+                  <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Nitrogen<span className="text-danger"> *</span></label> <input type="number" id="fname" name="N" placeholder="Enter your first name" /> </div>
+                  <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Phosphorus<span className="text-danger"> *</span></label> <input type="number" id="lname" name="p" placeholder="Enter your last name" /> </div>
+                </div>
+                <div className="row justify-content-between text-left">
+                  <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Potassiam<span className="text-danger"> *</span></label> <input type="number" id="email" name="K" placeholder="" /> </div>
+                  <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Temperature<span className="text-danger"> *</span></label> <input type="number" id="mob" name="temperature" placeholder="" /> </div>
+                </div>
+                <div className="row justify-content-between text-left">
+                  <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Humidity<span className="text-danger"> *</span></label> <input type="number" id="job" name="humidity" placeholder="" /> </div>
+                  <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Rainfall<span className="text-danger"> *</span></label> <input type="number" id="mob" name="rainfall" placeholder="" /> </div>
+                </div>
+                <div className="row justify-content-between text-left df">
+                  <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Ph<span className="text-danger"> *</span></label> <input type="number" id="job" name="ph" placeholder="" /> </div>
+                </div>
+                <div className="df soilbut">
+                  <Link to={ }><div className="form-group col-sm-6"> <button type="submit" className="btn-block btn-primary">Predict</button> </div></Link>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-
-        <div className="row mb-4">
-          <div className="col">
-            <div className="form-outline">
-              <input type="number" required name='Phosphorus' id="form3Example1" className="form-control" />
-              <label className="form-label" htmlFor="form3Example1">Phosphorus</label>
-            </div>
-          </div>
-          <div className="col">
-            <div className="form-outline">
-              <input type="number" required name='PH' id="form3Example2" className="form-control" />
-              <label className="form-label" htmlFor="form3Example2">PH</label>
-            </div>
-          </div>
-        </div>
-
-        <div className="form-outline mb-4">
-          <input type="text" required name='Address' id="form3Example4" size={50} className="form-control" />
-          <label className="form-label" htmlFor="form3Example4">Address</label>
-        </div>
-
-        <button type="submit" className="btn btn-primary btn-block mb-4">Predict</button>
-      </form>
+      </div>
       {crop.map((crop) => {
         return <CropItem crops={crop} />
       })}
