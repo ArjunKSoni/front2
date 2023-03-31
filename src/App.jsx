@@ -16,7 +16,6 @@ import Ngo from './components/ngo';
 import SignIn from './components/signIn';
 import Authstate from './context/authState';
 import Predictcrop from './components/predictcrop';
-import Page_not_found from './components/page_not_found';
 import LandingPage from './components/landingPage';
 
 function App() {

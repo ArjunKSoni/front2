@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import Authcontext from '../context/authcontext'
+import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
     const { crop } = useContext(Authcontext)
