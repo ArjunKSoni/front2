@@ -3,6 +3,21 @@ import React from 'react'
 
 const Home = () => {
 
+  try {
+    (async () => {
+      const apicall = await fetch(`...`, {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json"
+        }, body: JSON.stringify({}),
+      })
+      let data = await apicall.json()
+      data = Array.from(data)
+      setData(li.concat(data))
+    })();
+  } catch (error) {
+
+  }
   return (
     <div className='df home'>
       <div className='container h_main df'>
@@ -14,7 +29,7 @@ const Home = () => {
       <div className='hr'></div>
       <div className='df'>
         <h1>Services</h1>
-        
+
       </div>
     </div>
 

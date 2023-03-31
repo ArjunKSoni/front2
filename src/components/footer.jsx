@@ -30,24 +30,18 @@ const Footer = () => {
             </form>
           </section>
           <section className="mb-4">
-            <Link className="btn btn-outline-light btn-floating m-1" to="#!" role="button"
+            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
             ><i className="fab fa-facebook-f"></i
-            ></Link>
-            <Link className="btn btn-outline-light btn-floating m-1" to="#!" role="button"
+            ></a>
+            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
             ><i className="fab fa-twitter"></i
-            ></Link>
-            <Link className="btn btn-outline-light btn-floating m-1" to="#!" role="button"
+            ></a>
+            <a className="btn btn-outline-light btn-floating m-1" href="agroexperttt123@gmail.com" role="button"
             ><i className="fab fa-google"></i
-            ></Link>
-            <Link className="btn btn-outline-light btn-floating m-1" to="#!" role="button"
+            ></a>
+            <a className="btn btn-outline-light btn-floating m-1" href="https://instagram.com/agroexpert_31?igshid=ZDdkNTZiNTM=" role="button"
             ><i className="fab fa-instagram"></i
-            ></Link>
-            <Link className="btn btn-outline-light btn-floating m-1" to="#!" role="button"
-            ><i className="fab fa-linkedin-in"></i
-            ></Link>
-            <Link className="btn btn-outline-light btn-floating m-1" to="#!" role="button"
-            ><i className="fab fa-github"></i
-            ></Link>
+            ></a>
           </section>
           <section className="mb-4">
             <p>

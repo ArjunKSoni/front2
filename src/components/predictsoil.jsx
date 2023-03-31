@@ -49,7 +49,7 @@ const Predictsoil = () => {
                   <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Ph<span className="text-danger"> *</span></label> <input type="number" id="job" name="ph" placeholder="" /> </div>
                 </div>
                 <div className="df soilbut">
-                  <Link to={ }><div className="form-group col-sm-6"> <button type="submit" className="btn-block btn-primary">Predict</button> </div></Link>
+                  <Link to={""}><div className="form-group col-sm-6"> <button type="submit" className="btn-block btn-primary">Predict</button> </div></Link>
                 </div>
               </form>
             </div>

@@ -16,6 +16,7 @@ import Ngo from './components/ngo';
 import SignIn from './components/signIn';
 import Authstate from './context/authState';
 import Predictcrop from './components/predictcrop';
+import Page_not_found from './components/page_not_found';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Authstate>
         <Navbar />
         <Routes>
+          <Route exact path='/pageNotFound' element={<Page_not_found />} />
           <Route exact path='/' element={<Home />} />
           <Route exact path='/disease' element={<Disease />} />
           <Route exact path='/predsoil' element={<Predictsoil />} />

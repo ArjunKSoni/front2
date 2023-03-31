@@ -35,7 +35,7 @@
   height: 50px;
   border-radius: 15px;
   border-width: 0px;
-  background-color: #ffffffa0;
+  background-color: #ffffff;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 
@@ -116,10 +116,11 @@
 }
 
 .home {
-  background-image: url("../public/bg.jpg");
+  background-image: url("../public/mountain.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+
 }
 
 .hr {
@@ -274,4 +275,40 @@
   width: 12rem;
   height: 3rem;
   border-radius: 10px;
+}
+
+
+
+.body4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(227, 223, 218);
+  height: 87.6vh;
+}
+
+.h4 {
+  font-size: 30px;
+}
+
+.logImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 300px;
+  margin-right: 20px;
+}
+
+.button4 {
+  padding: 5px 30px;
+  font-size: 15px;
+  font-weight: bolder;
+  border-color: transparent;
+  background-color: rgb(82, 239, 82);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.button4:hover {
+  transform: scale(1.2);
 }
