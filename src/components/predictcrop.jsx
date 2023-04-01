@@ -1,43 +1,64 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
+import Authcontext from '../context/authcontext'
+import { Link } from 'react-router-dom'
 
 const Predictcrop = () => {
-    return (
-        <div className="body3">
-            <form action="/get_soil_info" method="post">
-                <div class="form3">
-                    <div class="head3">
-                        <div class="tittle3">
-                            <h2>Form</h2>
-                        </div>
-                        <div class="subhead3">
-                            <h3>Enter your soil conditions</h3>
-                        </div>
-                    </div>
-                    <div class="content3">
-                        <div class="group3"> Crop you want to grow <input type="text" name="label" placeholder="Enter crop name"
-                            id="label" required /></div>
-                        <div class="a">
-                            <div class="group3">Nitrogen <input type="number" name="N" id="N" required /></div>
-                            <div class="group3">Phosphorous<input type="number" name="P" id="P" required /></div>
-                        </div>
-                        <div class="b">
-                            <div class="group3">Potassium <input type="number" name="K" id="K" required /></div>
-                            <div class="group3">Temperature (in C)<input type="number" name="temperature" id="temperature"
-                                required /></div>
-                        </div>
-                        <div class="c">
-                            <div class="group3">Humidity <input type="number" name="humidity" id="humidity" required /></div>
-                            <div class="group3">Rainfall <input type="number" name="rainfall" id="rainfall" required /></div>
-                        </div>
-                        <div class="group3"></div>ph level <input type="number" name="ph" id="ph" required />
-                    </div>
+    const { searchsoil } = useContext(Authcontext)
+    const [user, setUser] = useState({
+        N: "",
+        P: "",
+        K: "",
+        ph: " ",
+        temperature: "",
+        humidity: "",
+        rainfall: "",
+        label: ""
+    })
+    const handleClick = (e) => {
+        searchsoil(user)
 
-                    <div class="button3">
-                        <button type="submit" class="btn btn-dark">Submit</button>
+    }
+
+    const onChange = (e) => {
+        user[e.target.name] = e.target.value;
+        setUser(user)
+    }
+
+
+    return (
+        <div className='predict_main'>
+            {/* create form  */}
+            <div className="container-fluid px-1 py-5 mx-auto">
+                <div className="row d-flex justify-content-center">
+                    <div className="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                        <h3>Predict Soil</h3>
+                        <p className="blue-text">Just answer a few questions<br /> so that we can predict the right soil conditions for you.</p>
+                        <div className="card">
+                            <form className="form-card">
+                                <div className="row justify-content-between text-left">
+                                    <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Nitrogen<span className="text-danger"> *</span></label> <input onChange={onChange} required type="number" id="fname" name="N" placeholder="" /> </div>
+                                    <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Phosphorus<span className="text-danger"> *</span></label> <input type="number" required onChange={onChange} id="lname" name="p" placeholder="" /> </div>
+                                </div>
+                                <div className="row justify-content-between text-left">
+                                    <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Potassiam<span className="text-danger"> *</span></label> <input type="number" required onChange={onChange} id="email" name="K" placeholder="" /> </div>
+                                    <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Temperature<span className="text-danger"> *</span></label> <input type="number" required onChange={onChange} id="mob" name="temperature" placeholder="" /> </div>
+                                </div>
+                                <div className="row justify-content-between text-left">
+                                    <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Humidity<span className="text-danger"> *</span></label> <input type="number" id="job" required onChange={onChange} name="humidity" placeholder="" /> </div>
+                                    <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Rainfall<span className="text-danger"> *</span></label> <input type="number" id="mob" required onChange={onChange} name="rainfall" placeholder="" /> </div>
+                                </div>
+                                <div className="row justify-content-between text-left ">
+                                    <div className="form-group col-sm-6 flex-column d-flex"> <label className="form-control-label px-3">Ph<span className="text-danger"> *</span></label> <input type="number" id="job" required onChange={onChange} name="ph" placeholder="" /> </div>
+                                </div>
+                                <div className="df soilbut">
+                                    <Link to={"/landingPage"}><div className="form-group col-sm-6"> <button type="submit" onClick={handleClick} className="btn-block btn-primary">Predict</button> </div></Link>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </form>
-        </div>
+            </div >
+        </div >
     )
 }
 

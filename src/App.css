@@ -320,7 +320,7 @@
 .box7 {
   background: rgb(2, 0, 36) linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(26, 102, 238, 1) 0%, rgba(0, 228, 255, 1) 72%);
   min-height: 65vh;
-  margin-top: 30px;
+  margin-top: 65px;
   display: flex;
   align-items: center;
   justify-content: space-around;
