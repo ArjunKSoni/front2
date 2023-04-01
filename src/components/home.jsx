@@ -18,6 +18,7 @@ const Home = () => {
   return (
     <div className='df home'>
       <div className='container h_main df'>
+        <h1 className='textmain'>AGRO EXPERT</h1>
         <form className="d-flex">
           <input className="form-control  s_input" type="search" onChange={onchange} placeholder="Search for Crops..." aria-label="Search" />
           <Link to={"/landingPage"}><button type="submit" onClick={handleOnclick} className="btn btn-dark s_button">Search</button></Link>

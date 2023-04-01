@@ -17,6 +17,8 @@ import SignIn from './components/signIn';
 import Authstate from './context/authState';
 import Predictcrop from './components/predictcrop';
 import LandingPage from './components/landingPage';
+import LoansAndCredict from './components/loansAndCredict';
+import Govern from './components/govern';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
       <Authstate>
         <Navbar />
         <Routes>
+          <Route exact path='/govern' element={<Govern />} />
+          <Route exact path='/loans' element={<LoansAndCredict />} />
           <Route exact path='/landingPage' element={<LandingPage />} />
           <Route exact path='/' element={<Home />} />
           <Route exact path='/disease' element={<Disease />} />

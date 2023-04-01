@@ -14,18 +14,18 @@ const HelpingHand = () => {
           <div className="col-md-6">
             <div className="box df">
               <i className="fas fa-shield-alt box-icon"></i>
-              <h2 className="box-title">Insurance</h2>
-              <p className="box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-              <Link to=" " className="btn btn-dark  round">Search</Link>
+              <h2 className="box-title">Loans and Credits</h2>
+              <p className="box-text"></p>
+              <Link to="/loans " className="btn btn-dark  round">Search</Link>
             </div>
           </div>
           <div className="col-md-6">
             <div className="box df">
               <i className="fas fa-car-crash box-icon"></i>
-              <h2 className="box-title">Accidents</h2>
-              <p className="box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              <h2 className="box-title">Government Help</h2>
+              <p className="box-text">
               </p>
-              <Link to=" " className="btn btn-dark  round">Search</Link>
+              <Link to="/govern" className="btn btn-dark  round">Search</Link>
             </div>
           </div>
         </div>
@@ -33,8 +33,8 @@ const HelpingHand = () => {
           <div className="col-md-6">
             <div className="box df">
               <i className="fas fa-home boxbox-icon"></i>
-              <h2 className="box-title">Property</h2>
-              <p className="box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              <h2 className="box-title">Plant Prevention</h2>
+              <p className="box-text">
               </p>
               <Link to=" " className="btn btn-dark  round">Search</Link>
             </div>
@@ -42,8 +42,8 @@ const HelpingHand = () => {
           <div className="col-md-6">
             <div className="box df">
               <i className="fas fa-plane box-icon"></i>
-              <h2 className="box-title">Travel</h2>
-              <p className="box-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+              <h2 className="box-title">Tutorial</h2>
+              <p className="box-text">
               </p>
               <Link to=" " className="btn btn-dark  round">Search</Link>
             </div>
