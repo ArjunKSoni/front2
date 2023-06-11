@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
 
         <div className="text-center p-3">
-          © 2020 Copyright:
+          © 2023 Copyright:
           <Link className="text-white" to="/">Farm Expert</Link>
         </div>
       </footer>
