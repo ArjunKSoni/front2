@@ -6,7 +6,7 @@ const Authstate = (props) => {
     const [user, setUser] = useState()
     const [crop, setData] = useState([])
     const register = async (reg) => {
-        const apicall = await fetch(`https://backend-p.up.railway.app/api/auth/register`, {
+        const apicall = await fetch(`https://backend-six-lilac.vercel.app/api/auth/register`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -74,7 +74,7 @@ const Authstate = (props) => {
     }
 
     const login = async (reg) => {
-        const apicall = await fetch(`https://backend-p.up.railway.app/api/auth/login`, {
+        const apicall = await fetch(`https://backend-six-lilac.vercel.app/api/auth/login`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
