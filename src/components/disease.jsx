@@ -45,14 +45,14 @@ const Disease = () => {
         {previewUrl &&
           <>
             <div className='card2'></div>
-            <div class="card hei fx">
-              <div class="card-block fx">
+            <div className="card hei fx">
+              <div className="card-block fx">
                 <img src={previewUrl} alt='image' width={"300px"} height={"200px"} />
-                <h1 class="card-title">Card title</h1>
-                <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                <h1 className="card-title">Card title</h1>
+                <h6 className="card-subtitle text-muted">Support card subtitle</h6>
               </div>
-              <div class="card-block fx">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div className="card-block fx">
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
           </>

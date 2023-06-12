@@ -8,34 +8,30 @@ const LandingPage = () => {
     const handleOnclick1 = (e) => {
         // e.preventDefault()
         setSearch(crop.cn[1])
-        console.log(crop.cn[1])
-        console.log(sea)
-        search(sea)
+        search(crop.cn[1])
     }
     const handleOnclick2 = (e) => {
         // e.preventDefault()
         setSearch(crop.cn[2])
-        console.log(sea)
-        search(sea)
+        search(crop.cn[2])
     }
     const handleOnclick3 = (e) => {
         // e.preventDefault()
         setSearch(crop.cn[3])
-        console.log(sea)
-        search(sea)
+        search(crop.cn[3])
     }
     return (
         <>
             <div className='lpMain'>
-                {crop.status === "success" && <><div class="box7">
-                    <div class="desc7">
+                {crop.status === "success" && <><div className="box7">
+                    <div className="desc7">
                         <h1>{crop.cn[0]}</h1>
                         <p>{crop.cd}</p>
                     </div>
-                    <div class="img7"><img src={crop.ci[0]} alt="" /></div>
+                    <div className="img7"><img src={crop.ci[0]} alt="" /></div>
                 </div>
-                    <section class="center7">
-                        <div class="black17">
+                    <section className="center7">
+                        <div className="black17">
                             <div id="body7">
                                 <h2>Nitrogen</h2><br />
                                 <p>{crop.crop[1]}</p>
@@ -66,31 +62,31 @@ const LandingPage = () => {
                             </div>
                         </div>
                     </section>
-                    <div class="black7">
+                    <div className="black7">
                         <form >
-                            <div class="card7">
+                            <div className="card7">
                                 <Link to={"/landingPage"}><button onClick={handleOnclick1} name="search" value={crop.cn[1]}><img src={crop.ci[1]} alt="" /></button></Link>
                                 <p>{crop.cn[1]}</p>
                             </div>
                         </form>
                         <form >
-                            <div class="card7">
+                            <div className="card7">
                                 <Link to={"/landingPage"}><button onClick={handleOnclick2} name="search" value={crop.cn[2]}><img src={crop.ci[2]} alt="" /></button></Link>
                                 <p>{crop.cn[2]}</p>
                             </div>
                         </form>
                         <form >
-                            <div class="card7">
+                            <div className="card7">
                                 <Link to={"/landingPage"}><button onClick={handleOnclick3} name="search" value={crop.cn[3]}><img src={crop.ci[3]} alt="" /></button></Link>
                                 <p>{crop.cn[3]}</p>
                             </div>
                         </form>
                     </div></>}
                 {crop.status === "fail" && <><div>
-                    <section class="body4">
+                    <section className="body4">
                         <img src="../static/pngwing.com.png" alt="" height="200px" width="250px" />
-                        <h1 class="h4">No Result Found</h1>
-                        <Link to="/"><button class="button4">Continue</button></Link>
+                        <h1 className="h4">No Result Found</h1>
+                        <Link to="/"><button className="button4">Continue</button></Link>
                     </section>
                 </div></>}
             </div>

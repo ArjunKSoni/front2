@@ -30,18 +30,10 @@ const Footer = () => {
             </form>
           </section>
           <section className="mb-4">
-            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i className="fab fa-facebook-f"></i
-            ></a>
-            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i className="fab fa-twitter"></i
-            ></a>
-            <a className="btn btn-outline-light btn-floating m-1" href="agroexperttt123@gmail.com" role="button"
-            ><i className="fab fa-google"></i
-            ></a>
-            <a className="btn btn-outline-light btn-floating m-1" href="https://instagram.com/agroexpert_31?igshid=ZDdkNTZiNTM=" role="button"
-            ><i className="fab fa-instagram"></i
-            ></a>
+            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i className="fab fa-facebook-f"></i></a>
+            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i className="fab fa-twitter"></i></a>
+            <a className="btn btn-outline-light btn-floating m-1" href="agroexperttt123@gmail.com" role="button"><i className="fab fa-google"></i></a>
+            <a className="btn btn-outline-light btn-floating m-1" href="https://instagram.com/agroexpert_31?igshid=ZDdkNTZiNTM=" role="button"><i className="fab fa-instagram"></i></a>
           </section>
           <section className="mb-4">
             <p>
